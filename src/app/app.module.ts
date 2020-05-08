@@ -1,18 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { PdfmakeModule } from './pdfmake/pdfmake.module';
+import { ExampleComponent } from './example/example.component';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    ExampleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CommonModule,
+    PdfmakeModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ExampleComponent]
 })
 export class AppModule { }
