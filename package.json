@@ -1,15 +1,20 @@
 {
   "name": "angular-boss-pdf",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThapeloDev/angular-boss-pdf.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build": "rimraf dist & ngc -p src/app/tsconfig.json & copy package.json \"dist\" & copy README.md \"dist\"",
+    "compress": "rimraf ng-pdf-make.tar & tar -cvf ng-pdf-make.tar \"dist\""
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~9.0.3",
     "@angular/common": "~9.0.3",
@@ -45,5 +50,13 @@
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
     "typescript": "~3.7.5"
-  }
+  },
+  "description": "This is library creates a bridge to use pdfmake library optimized for Angular V9.\r The Original code was forked from;\r  - https://github.com/BennyFranco/ng-pdf-make (Angular 2)\r  - http://pdfmake.org/",
+  "bugs": {
+    "url": "https://github.com/ThapeloDev/angular-boss-pdf/issues"
+  },
+  "homepage": "https://github.com/ThapeloDev/angular-boss-pdf#readme",
+  "main": "index.ts",
+  "author": "Thapelo Mokole",
+  "license": "ISC"
 }
