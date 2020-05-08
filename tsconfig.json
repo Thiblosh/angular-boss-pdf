@@ -1,16 +1,24 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "./app",
     "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "emitDecoratorMetadata": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "noEmitHelpers": false,
+    "noImplicitAny": false,
+    "declaration": true,
+    "skipLibCheck": false,
+    "stripInternal": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "typeRoots": [
       "node_modules/@types/node",
       "node_modules/@types/pdfmake"
@@ -21,7 +29,9 @@
     ]
   },
   "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    "genDir": "../temp/factories",
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true,
+    "entryModule": "app/pdfmake/pdfmake.module#PdfmakeModule"
   }
 }

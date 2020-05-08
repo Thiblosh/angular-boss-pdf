@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PdfmakeService } from '../pdfmake/pdfmake.service';
 import { Cell, Row, Table } from '../models/table';
+import { PdfCreateService } from '../pdf-create/pdf-create.service';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -10,7 +10,7 @@ import { Cell, Row, Table } from '../models/table';
 })
 export class ExampleComponent implements OnInit {
 
-  constructor(public pdfmake: PdfmakeService) { }
+  constructor(public pdfmake: PdfCreateService) { }
 
   ngOnInit() {
     this.pdfmake.create();

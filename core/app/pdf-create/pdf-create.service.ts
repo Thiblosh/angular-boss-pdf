@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Table } from '../models/table';
+import { PredefinedPageSize, PageOrientation } from 'pdfmake/interfaces';
 import { PdfDefinition } from '../models/pdf';
 import * as pdfMakeCore from 'pdfmake/build/pdfmake';
 import * as pdfMakeFonts from 'pdfmake/build/vfs_fonts';
-import { PageOrientation, PredefinedPageSize } from 'pdfmake/interfaces';
+import { Table } from '..';
 
-@Injectable()
-export class PdfmakeService {
-
+@Injectable({
+  providedIn: 'root',
+})
+export class PdfCreateService {
   pageSize: PredefinedPageSize = 'LETTER';
   pageOrientation: PageOrientation = 'portrait';
   documentDefinition: PdfDefinition;
@@ -49,7 +50,11 @@ export class PdfmakeService {
   }
 
   addText(text: string, style?: any | string, pageBreak?: string) {
-    this.getPdfDefinition().content.push({ text: text, style: style, pageBreak: pageBreak });
+    this.getPdfDefinition().content.push({
+      text: text,
+      style: style,
+      pageBreak: pageBreak,
+    });
   }
 
   addColumns(columnsText: string[]) {
@@ -75,7 +80,9 @@ export class PdfmakeService {
         }
       }
 
-      this.getPdfDefinition().content.push({ table: { widths: table.widths, body: body } });
+      this.getPdfDefinition().content.push({
+        table: { widths: table.widths, body: body },
+      });
     }
   }
 
@@ -99,7 +106,7 @@ export class PdfmakeService {
       const finalImage = {
         image: canvas.toDataURL('image/png'),
         width: width ? width : image.naturalWidth,
-        height: height ? height : image.naturalHeight
+        height: height ? height : image.naturalHeight,
       };
 
       this.getPdfDefinition().content.push(finalImage);
@@ -113,14 +120,20 @@ export class PdfmakeService {
   }
 
   addOrderedList(items: any[], reversed = false, start?: number) {
-    this.getPdfDefinition().content.push({ reversed: reversed, start: start, ol: items });
+    this.getPdfDefinition().content.push({
+      reversed: reversed,
+      start: start,
+      ol: items,
+    });
   }
 
   private getPdfDefinition() {
     if (this.documentDefinition) {
       return this.documentDefinition;
     } else {
-      throw new Error('The document isn\'t created! Please use the create()" method to create it before use it.');
+      throw new Error(
+        'The document isn\'t created! Please use the create()" method to create it before use it.'
+      );
     }
   }
 }

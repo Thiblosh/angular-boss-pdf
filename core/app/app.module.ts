@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PdfmakeModule } from './pdfmake/pdfmake.module';
 import { ExampleComponent } from './example/example.component';
+import { PdfCreateModule } from './pdf-create/pdf-create.module';
 
 
 @NgModule({
@@ -12,7 +12,7 @@ import { ExampleComponent } from './example/example.component';
   imports: [
     BrowserModule,
     CommonModule,
-    PdfmakeModule,
+    PdfCreateModule,
   ],
   providers: [],
   bootstrap: [ExampleComponent]
