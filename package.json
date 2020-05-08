@@ -56,7 +56,7 @@
     "url": "https://github.com/ThapeloDev/angular-boss-pdf/issues"
   },
   "homepage": "https://github.com/ThapeloDev/angular-boss-pdf#readme",
-  "main": "main.js",
+  "main": "public_api.ts",
   "author": "Thapelo Mokole",
   "license": "ISC"
 }
