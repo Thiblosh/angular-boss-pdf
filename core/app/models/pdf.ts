@@ -6,8 +6,6 @@ export class PdfDefinition implements TDocumentDefinitions {
   footer?: any;
   content: any;
   styles?: any;
-  // pageSize?: pageSizeType;
-  // pageOrientation?: pageOrientationType;
   pageMargins?: [number, number, number, number];
   defaultStyle?: {
     font?: string;
