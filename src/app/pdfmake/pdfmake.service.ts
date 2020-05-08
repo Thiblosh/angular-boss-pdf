@@ -3,12 +3,13 @@ import { Table } from '../models/table';
 import { PdfDefinition } from '../models/pdf';
 import * as pdfMakeCore from 'pdfmake/build/pdfmake';
 import * as pdfMakeFonts from 'pdfmake/build/vfs_fonts';
+import { PageOrientation, PredefinedPageSize } from 'pdfmake/interfaces';
 
 @Injectable()
 export class PdfmakeService {
 
-  pageSize: any = 'LETTER';
-  pageOrientation: any = 'portrait';
+  pageSize: PredefinedPageSize = 'LETTER';
+  pageOrientation: PageOrientation = 'portrait';
   documentDefinition: PdfDefinition;
 
   private pdfMake: any;
