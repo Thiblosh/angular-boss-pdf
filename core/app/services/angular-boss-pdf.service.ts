@@ -6,10 +6,9 @@ import * as pdfMakeFonts from 'pdfmake/build/vfs_fonts';
 import { Table } from '../models/table';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class PdfCreateService {
-
+export class AngularBossPdfService {
   pageSize: PredefinedPageSize = 'LETTER';
   pageOrientation: PageOrientation = 'portrait';
   documentDefinition: PdfDefinition;
@@ -52,9 +51,9 @@ export class PdfCreateService {
 
   addText(text: string, style?: any | string, pageBreak?: string) {
     this.getPdfDefinition().content.push({
-      text: text,
-      style: style,
-      pageBreak: pageBreak,
+      text,
+      style,
+      pageBreak,
     });
   }
 
@@ -64,7 +63,7 @@ export class PdfCreateService {
       columns.push({ text: column });
     }
 
-    this.getPdfDefinition().content.push({ columns: columns });
+    this.getPdfDefinition().content.push({ columns });
   }
 
   addTable(table: Table) {
@@ -82,7 +81,7 @@ export class PdfCreateService {
       }
 
       this.getPdfDefinition().content.push({
-        table: { widths: table.widths, body: body },
+        table: { widths: table.widths, body },
       });
     }
   }
@@ -122,8 +121,8 @@ export class PdfCreateService {
 
   addOrderedList(items: any[], reversed = false, start?: number) {
     this.getPdfDefinition().content.push({
-      reversed: reversed,
-      start: start,
+      reversed,
+      start,
       ol: items,
     });
   }
@@ -137,5 +136,4 @@ export class PdfCreateService {
       );
     }
   }
-  
 }

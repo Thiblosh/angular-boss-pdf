@@ -33,7 +33,7 @@
       "genDir": "../temp/factories",
       "strictMetadataEmit": true,
       "skipTemplateCodegen": true,
-      "entryModule": "app/modules/pdf-create/pdf-create.module#PdfCreateModule"
+      "entryModule": "app/modules/angular-boss-pdf/angular-boss-pdf.module#AngularBossPdfModule"
     }
   }
   
