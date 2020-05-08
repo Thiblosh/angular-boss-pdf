@@ -16,14 +16,14 @@
   },
   "private": false,
   "dependencies": {
-    "@angular/animations": "~9.0.3",
-    "@angular/common": "~9.0.3",
-    "@angular/compiler": "~9.0.3",
-    "@angular/core": "~9.0.3",
-    "@angular/forms": "~9.0.3",
-    "@angular/platform-browser": "~9.0.3",
-    "@angular/platform-browser-dynamic": "~9.0.3",
-    "@angular/router": "~9.0.3",
+    "@angular/animations": "^8.2.14",
+    "@angular/common": "^8.2.14",
+    "@angular/compiler": "^8.2.14",
+    "@angular/core": "^8.2.14",
+    "@angular/forms": "^8.2.14",
+    "@angular/platform-browser": "^8.2.14",
+    "@angular/platform-browser-dynamic": "^8.2.14",
+    "@angular/router": "^8.2.14",
     "@types/pdfmake": "^0.1.13",
     "pdfmake": "^0.1.65",
     "rxjs": "~6.5.4",
@@ -31,10 +31,10 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.900.4",
-    "@angular/cli": "~9.0.4",
-    "@angular/compiler-cli": "~9.0.3",
-    "@angular/language-service": "~9.0.3",
+    "@angular-devkit/build-angular": "~0.803.22",
+    "@angular/cli": "^8.3.22",
+    "@angular/compiler-cli": "^8.2.14",
+    "@angular/language-service": "^8.2.14",
     "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
@@ -49,7 +49,7 @@
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
-    "typescript": "~3.7.5"
+    "typescript": "~3.5.3"
   },
   "description": "This is library creates a bridge to use pdfmake library optimized for Angular V9.\r The Original code was forked from;\r  - https://github.com/BennyFranco/ng-pdf-make (Angular 2)\r  - http://pdfmake.org/",
   "bugs": {
