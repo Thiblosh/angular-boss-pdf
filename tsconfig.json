@@ -3,32 +3,23 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
-    "emitDecoratorMetadata": true,
-    "sourceMap": true,
-    "inlineSources": true,
-    "noEmitHelpers": false,
-    "noImplicitAny": false,
-    "declaration": true,
-    "skipLibCheck": false,
-    "stripInternal": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
     "typeRoots": [
-      "node_modules/@types/node",
-      "node_modules/@types/pdfmake"
+      "node_modules/@types"
     ],
     "lib": [
       "es2018",
       "dom"
     ]
   },
- "angularCompilerOptions": {
+  "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
   }
