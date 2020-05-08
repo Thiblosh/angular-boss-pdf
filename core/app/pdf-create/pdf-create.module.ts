@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PdfmakeService } from './pdfmake.service';
+import { PdfCreateService } from './pdf-create.service';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [],
   providers: [
-    PdfmakeService
+    PdfCreateService
   ]
 })
-export class PdfmakeModule { }
+export class PdfCreateModule { }
