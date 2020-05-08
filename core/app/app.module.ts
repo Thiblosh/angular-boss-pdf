@@ -1,20 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ExampleComponent } from './example/example.component';
-import { PdfCreateModule } from './pdf-create/pdf-create.module';
+import { AppComponent } from './app.component';
 
 
 @NgModule({
   declarations: [
-    ExampleComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
-    PdfCreateModule,
   ],
   providers: [],
-  bootstrap: [ExampleComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

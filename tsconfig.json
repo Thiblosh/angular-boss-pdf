@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./app",
+    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "downlevelIteration": true,
     "experimentalDecorators": true,
@@ -28,10 +28,8 @@
       "dom"
     ]
   },
-  "angularCompilerOptions": {
-    "genDir": "../temp/factories",
-    "strictMetadataEmit": true,
-    "skipTemplateCodegen": true,
-    "entryModule": "app/pdfmake/pdfmake.module#PdfmakeModule"
+ "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
   }
 }
