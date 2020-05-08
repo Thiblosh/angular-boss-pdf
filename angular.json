@@ -7,24 +7,24 @@
       "projectType": "application",
       "schematics": {},
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "core",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/angular-boss-pdf",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "index": "core/index.html",
+            "main": "core/main.ts",
+            "polyfills": "core/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "core/favicon.ico",
+              "core/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "core/styles.css"
             ],
             "scripts": [
               "./node_modules/pdfmake/build/pdfmake.js",
@@ -35,8 +35,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "core/environments/environment.ts",
+                  "with": "core/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -82,16 +82,16 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "main": "core/test.ts",
+            "polyfills": "core/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "core/favicon.ico",
+              "core/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "core/styles.css"
             ],
             "scripts": []
           }

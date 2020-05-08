@@ -11,7 +11,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build": "rimraf dist & ngc -p src/app/tsconfig.json & copy package.json \"dist\" & copy README.md \"dist\"",
+    "build": "rimraf dist & ngc -p core/app/tsconfig.json & copy package.json \"dist\" & copy README.md \"dist\"",
     "compress": "rimraf ng-pdf-make.tar & tar -cvf ng-pdf-make.tar \"dist\""
   },
   "private": false,
@@ -56,7 +56,7 @@
     "url": "https://github.com/ThapeloDev/angular-boss-pdf/issues"
   },
   "homepage": "https://github.com/ThapeloDev/angular-boss-pdf#readme",
-  "main": "index.ts",
+  "main": "main.js",
   "author": "Thapelo Mokole",
   "license": "ISC"
 }
