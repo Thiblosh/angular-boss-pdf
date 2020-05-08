@@ -10,5 +10,8 @@
   ],
   "include": [
     "core/**/*.d.ts"
-  ]
+  ],
+  "exclude": [
+    "../node_modules/angular-boss-pdf/**/*.spec.ts"
+    ]
 }
